@@ -5,7 +5,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
-import serverSideTracking from '../../customFunctions/server-side-tracking'
 import { useEffectOnce } from 'react-use';
 
 const Blog = ({ htmlString, data }) => {
