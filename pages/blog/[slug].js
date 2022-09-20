@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Script from 'next/script'
-import WebsiteHeader from '../../components/websiteHeader';
-import WebsiteFooter from '../../components/websiteFooter';
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -53,61 +51,738 @@ const Blog = ({ htmlString, data }) => {
 
                 {/* Webclip */}
                 <link href="images/webclip.png" rel="apple-touch-icon" />
-
-                {/* Facebook Pixel */}
-                <script dangerouslySetInnerHTML={{
-                    __html: `!function (f, b, e, v, n, t, s) {
-                      if (f.fbq) return; n = f.fbq = function () {
-                        n.callMethod ?
-                          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                      };
-                      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-                      n.queue = []; t = b.createElement(e); t.async = !0;
-                      t.src = v; s = b.getElementsByTagName(e)[0];
-                      s.parentNode.insertBefore(t, s)
-                    }(window, document, 'script',
-                      'https://connect.facebook.net/en_US/fbevents.js');
-                    fbq('init', '612352600179070');
-                    fbq('track', 'PageView');
-                    fbq('trackCustom', ${data.eventNameForTracking}, { eventID: ${data.eventIdForTracking} });`
-                }}
-                />
-                <noscript dangerouslySetInnerHTML={{
-                    __html: `<img height="1" width="1" style="display:none"
-                    src="https://www.facebook.com/tr?id=612352600179070&ev=PageView&noscript=1"/>`}}
-                />
-
-                {/* Autopilot Pixel */}
-                <script dangerouslySetInnerHTML={{
-                    __html: `type="text/javascript">(function (o) { var b = "https://fastemu.co/anywhere/", t = "17d3dd217754459aa87a15155f91958a856115af1ec449f399087dc3be744da4", a = window.AutopilotAnywhere = { _runQueue: [], run: function () { this._runQueue.push(arguments); } }, c = encodeURIComponent, s = "SCRIPT", d = document, l = d.getElementsByTagName(s)[0], p = "t=" + c(d.title || "") + "&u=" + c(d.location.href || "") + "&r=" + c(d.referrer || ""), j = "text/javascript", z, y; if (!window.Autopilot) window.Autopilot = a; if (o.app) p = "devmode=true&" + p; z = function (src, asy) { var e = d.createElement(s); e.src = src; e.type = j; e.async = asy; l.parentNode.insertBefore(e, l); }; y = function () { z(b + t + '?' + p, true); }; if (window.attachEvent) { window.attachEvent("onload", y); } else { window.addEventListener("load", y, false); } })({});`
-                }}
-                />
-
-                {/* HotJar Pixel */}
-                <script dangerouslySetInnerHTML={{
-                    __html: `(function (h, o, t, j, a, r) {
-                    h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-                    h._hjSettings = { hjid: 2629784, hjsv: 6 };
-                    a = o.getElementsByTagName('head')[0];
-                    r = o.createElement('script'); r.async = 1;
-                    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-                    a.appendChild(r);
-                    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');`
-                }}
-                />
             </Head>
             <div>
-                <WebsiteHeader />
-                <div className="section-34 _2 wf-section">
-                    <div className="div-block-197">
-                        <h1 className="heading-42">{data.blogTitle}</h1>
-                        <p className="paragraph-33">{data.blogDescription}</p>
-                        <p className="paragraph-31"><strong>{data.author}</strong> &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-span">{data.publishDate} &nbsp;&nbsp;&nbsp;&nbsp;{data.timeToRead}</span></p>
-                        <img src={data.blogImage} loading="lazy" width={1119} sizes="(max-width: 767px) 95vw, (max-width: 991px) 90vw, (max-width: 1279px) 800px, (max-width: 1439px) 59vw, 800px" alt="" className="image-64" />
-                        <div dangerouslySetInnerHTML={{ __html: htmlString }}></div>
+                <div
+                    data-animation="default"
+                    data-collapse="medium"
+                    data-duration={400}
+                    data-easing="ease"
+                    data-easing2="ease"
+                    role="banner"
+                    className="navbar desk w-nav"
+                >
+                    <div className="contain-div">
+                        <div className="div-block desktop">
+                            <a href="#" className="brand w-nav-brand">
+                                <img src="images/Neural-Leap.svg" loading="lazy" alt="" />
+                            </a>
+                            <nav role="navigation" className="w-nav-menu">
+                                <a href="#" className="nav-link w-nav-link">
+                                    Home
+                                </a>
+                                <a href="#" className="nav-link w-nav-link">
+                                    Pricing
+                                </a>
+                                <a href="#" className="nav-link w-nav-link">
+                                    Hiring
+                                </a>
+                                <a href="#" className="nav-link w-nav-link">
+                                    Case Studies
+                                </a>
+                            </nav>
+                            <div className="w-nav-button">
+                                <div className="icon w-icon-nav-menu" />
+                            </div>
+                        </div>
+                        <div className="div-block-2">
+                            <a href="#" className="nav-link sing-in w-nav-link">
+                                Sign in
+                            </a>
+                            <a href="#" className="button w-button">
+                                Sign up
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <WebsiteFooter />
+                <div
+                    data-animation="default"
+                    data-collapse="medium"
+                    data-duration={400}
+                    data-easing="ease"
+                    data-easing2="ease"
+                    role="banner"
+                    className="navbar-2 w-nav"
+                >
+                    <div className="div-block-30">
+                        <div className="menu-button-2 w-nav-button">
+                            <div className="icon-2 w-icon-nav-menu" />
+                        </div>
+                        <a href="index.html" className="brand-2 w-nav-brand">
+                            <img src="images/Neural-Leap.svg" loading="lazy" alt="" />
+                        </a>
+                        <nav role="navigation" className="nav-menu-2 w-nav-menu">
+                            <a href="#" className="nav-link-2 w-nav-link">
+                                Home
+                            </a>
+                            <a href="#" className="nav-link-2 w-nav-link">
+                                About
+                            </a>
+                            <a href="#" className="nav-link-2 w-nav-link">
+                                Contact
+                            </a>
+                            <a href="#" className="nav-link-2 w-nav-link">
+                                Sign in
+                            </a>
+                            <a href="#" className="blue-button _2 w-button">
+                                Sign up
+                            </a>
+                        </nav>
+                        <div className="div-block-83" />
+                    </div>
+                </div>
+                <div className="wf-section">
+                    <div className="div-block-86">
+                        <div className="search-bar-div">
+                            <form action="/search" className="search-2 w-form">
+                                <input
+                                    type="search"
+                                    className="search-input w-input"
+                                    maxLength={256}
+                                    name="query"
+                                    placeholder="Search…"
+                                    id="search"
+                                    required
+                                />
+                                <input
+                                    type="submit"
+                                    defaultValue
+                                    className="search-button-2 w-button"
+                                />
+                            </form>
+                        </div>
+                        <div>
+                            <div>
+                                <div className="text-block-4 hz">
+                                    Access a massive pool of Design talent
+                                </div>
+                                <p className="paragraph-21">
+                                    All the agility has been sucked out of agile projects
+                                </p>
+                                <div className="div-block-90">
+                                    <div className="div-block-91 hz">
+                                        <img src="images/Ellipse-166.svg" loading="lazy" alt="" />
+                                    </div>
+                                    <div>
+                                        <div className="text-block-5 hz">Vestibulum sed est.</div>
+                                        <div className="text-block-6 hz">Nec amet.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="div-block-96">
+                            <a href="#" className="social-link w-inline-block">
+                                <img src="images/twitter_1.svg" loading="lazy" alt="" />
+                            </a>
+                            <a href="#" className="social-link w-inline-block">
+                                <img src="images/fb_1.svg" loading="lazy" alt="" />
+                            </a>
+                            <a href="#" className="social-link w-inline-block">
+                                <img src="images/google_2.svg" loading="lazy" alt="" />
+                            </a>
+                        </div>
+                        <div className="div-block-97">
+                            <img
+                                src="images/blog-imag.png"
+                                loading="lazy"
+                                sizes="(max-width: 1919px) 90vw, 1500px"
+                                srcSet="images/blog-imag-p-500.png 500w, images/blog-imag-p-800.png 800w, images/blog-imag-p-1080.png 1080w, images/blog-imag.png 1134w"
+                                alt=""
+                                className="image-16"
+                            />
+                            <div className="div-block-98">
+                                <h1 className="heading-24">
+                                    Doing agile is not the same as being agile
+                                </h1>
+                                <p className="paragraph-22">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Tristique proin tristique gravida senectus interdum in. Nulla
+                                    dictum in pharetra vestibulum. Placerat sed feugiat odio id
+                                    aliquet quis magna ornare pharetra.
+                                    <br />
+                                    <br />
+                                    Scelerisque vel, ac dignissim vitae at commodo in nam duis.
+                                    Tristique aenean et cras purus ullamcorper tellus pretium
+                                    etiam nullam. Dolor pharetra proin nec auctor vulputate id
+                                    vulputate consequat. Pellentesque arcu tristique dignissim
+                                    pulvinar pulvinar nullam metus, risus.
+                                    <br />
+                                    <br />
+                                    Magna feugiat tristique leo, ipsum diam, condimentum. Duis
+                                    elementum eu faucibus est enim sed convallis iaculis.
+                                    <br />
+                                    Orci cursus cras id aliquet eget augue. Maecenas nisl enim
+                                    lobortis elementum enim eleifend fringilla semper. <br />
+                                    <br />
+                                    Vulputate egestas at nunc nunc viverra viverra maecenas. Purus
+                                    accumsan nisl at metus, quis id posuere amet. Rutrum porttitor
+                                    aliquam mauris quam gravida magna. Sed semper fames proin
+                                    nunc, erat elementum. Sed pretium est donec in. Velit,
+                                    venenatis fames sit malesuada eu.Commodo nullam aliquam
+                                    ultrices pellentesque tortor mattis semper fringilla. Nibh
+                                    nullam aliquet mauris, sagittis, blandit rutrum. Enim sed eu
+                                    sed aliquam. Gravida urna nunc, sed quis in gravida ut odio
+                                    potenti. Adipiscing ac sed suspendisse vel venenatis sed
+                                    gravida suspendisse.
+                                </p>
+                            </div>
+                            <div className="div-block-98">
+                                <h1 className="heading-24">
+                                    Doing agile is not the same as being agile
+                                </h1>
+                                <p className="paragraph-22">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Tristique proin tristique gravida senectus interdum in. Nulla
+                                    dictum in pharetra vestibulum. Placerat sed feugiat odio id
+                                    aliquet quis magna ornare pharetra.
+                                    <br />
+                                    <br />
+                                    Scelerisque vel, ac dignissim vitae at commodo in nam duis.
+                                    Tristique aenean et cras purus ullamcorper tellus pretium
+                                    etiam nullam. Dolor pharetra proin nec auctor vulputate id
+                                    vulputate consequat. Pellentesque arcu tristique dignissim
+                                    pulvinar pulvinar nullam metus, risus.
+                                    <br />
+                                    <br />
+                                    Magna feugiat tristique leo, ipsum diam, condimentum. Duis
+                                    elementum eu faucibus est enim sed convallis iaculis.
+                                    <br />
+                                    Orci cursus cras id aliquet eget augue. Maecenas nisl enim
+                                    lobortis elementum enim eleifend fringilla semper. <br />
+                                    <br />
+                                    Vulputate egestas at nunc nunc viverra viverra maecenas. Purus
+                                    accumsan nisl at metus, quis id posuere amet. Rutrum porttitor
+                                    aliquam mauris quam gravida magna. Sed semper fames proin
+                                    nunc, erat elementum. Sed pretium est donec in. Velit,
+                                    venenatis fames sit malesuada eu.Commodo nullam aliquam
+                                    ultrices pellentesque tortor mattis semper fringilla. Nibh
+                                    nullam aliquet mauris, sagittis, blandit rutrum. Enim sed eu
+                                    sed aliquam. Gravida urna nunc, sed quis in gravida ut odio
+                                    potenti. Adipiscing ac sed suspendisse vel venenatis sed
+                                    gravida suspendisse.
+                                </p>
+                            </div>
+                            <div className="div-block-98">
+                                <h1 className="heading-24">
+                                    Doing agile is not the same as being agile
+                                </h1>
+                                <p className="paragraph-22">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Tristique proin tristique gravida senectus interdum in. Nulla
+                                    dictum in pharetra vestibulum. Placerat sed feugiat odio id
+                                    aliquet quis magna ornare pharetra.
+                                    <br />
+                                    Scelerisque vel, ac dignissim vitae at commodo in nam duis.
+                                    Tristique aenean et cras purus ullamcorper tellus pretium
+                                    etiam nullam. Dolor pharetra proin nec auctor vulputate id
+                                    vulputate consequat. Pellentesque arcu tristique dignissim
+                                    pulvinar pulvinar nullam metus, risus.
+                                    <br />
+                                    <br />
+                                    Magna feugiat tristique leo, ipsum diam, condimentum. Duis
+                                    elementum eu faucibus est enim sed convallis iaculis.
+                                    <br />
+                                    Orci cursus cras id aliquet eget augue. Maecenas nisl enim
+                                    lobortis elementum enim eleifend fringilla semper. <br />
+                                    <br />
+                                    Vulputate egestas at nunc nunc viverra viverra maecenas. Purus
+                                    accumsan nisl at metus, quis id posuere amet. Rutrum porttitor
+                                    aliquam mauris quam gravida magna. Sed semper fames proin
+                                    nunc, erat elementum. Sed pretium est donec in. Velit,
+                                    venenatis fames sit malesuada eu.Commodo nullam aliquam
+                                    ultrices pellentesque tortor mattis semper fringilla. Nibh
+                                    nullam aliquet mauris, sagittis, blandit rutrum. Enim sed eu
+                                    sed aliquam. Gravida urna nunc, sed quis in gravida ut odio
+                                    potenti. Adipiscing ac sed suspendisse vel venenatis sed
+                                    gravida suspendisse.
+                                </p>
+                            </div>
+                            <div className="social-icons-blog">
+                                <div className="div-block-96 _2">
+                                    <a href="#" className="social-link _2 w-inline-block">
+                                        <img
+                                            src="images/fa-regular_comment.svg"
+                                            loading="lazy"
+                                            alt=""
+                                        />
+                                        <p className="paragraph-23">Comment</p>
+                                    </a>
+                                    <a href="#" className="social-link _2 w-inline-block">
+                                        <img
+                                            src="images/ant-design_like-outlined.svg"
+                                            loading="lazy"
+                                            alt=""
+                                        />
+                                        <p className="paragraph-23">Like</p>
+                                    </a>
+                                </div>
+                                <div className="div-block-96">
+                                    <a href="#" className="social-link w-inline-block">
+                                        <img src="images/twitter_1.svg" loading="lazy" alt="" />
+                                    </a>
+                                    <a href="#" className="social-link w-inline-block">
+                                        <img src="images/fb_1.svg" loading="lazy" alt="" />
+                                    </a>
+                                    <a href="#" className="social-link w-inline-block">
+                                        <img src="images/google_2.svg" loading="lazy" alt="" />
+                                    </a>
+                                </div>
+                                <div className="div-block-96 _3" />
+                            </div>
+                        </div>
+                        <div className="div-block-94">
+                            <div>
+                                <div className="div-block-87 ind">
+                                    <div className="div-block-88">
+                                        <img
+                                            src="images/Rectangle-4404.svg"
+                                            loading="lazy"
+                                            alt=""
+                                            className="image-14"
+                                        />
+                                        <div>
+                                            <div className="div-block-89">
+                                                <div className="text-block-2">Lorem ipsum</div>
+                                                <div className="text-block-3">Vestibulum sed est.</div>
+                                            </div>
+                                            <div className="text-block-4">
+                                                Access a massive pool of Design talent
+                                            </div>
+                                            <div className="div-block-90">
+                                                <div className="div-block-91">
+                                                    <img
+                                                        src="images/Ellipse-166.svg"
+                                                        loading="lazy"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <div className="text-block-5">
+                                                        Vestibulum sed est.
+                                                    </div>
+                                                    <div className="text-block-6">Nec amet.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="line-break" />
+                    <div className="div-block-99">
+                        <div className="div-block-101">
+                            <div className="div-block-98">
+                                <h1 className="heading-24">
+                                    Doing agile is not the same as being agile
+                                </h1>
+                                <p className="paragraph-22 _2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Tristique proin tristique gravida senectus interdum in. Nulla
+                                    dictum in pharetra vestibulum. Placerat sed feugiat odio id
+                                    aliquet quis magna ornare pharetra.
+                                </p>
+                                <a href="#" className="button-3 w-button">
+                                    Read More
+                                </a>
+                            </div>
+                            <div className="div-block-100">
+                                <div
+                                    data-delay={4000}
+                                    data-animation="slide"
+                                    className="slider w-slider"
+                                    data-autoplay="false"
+                                    data-easing="ease"
+                                    data-hide-arrows="false"
+                                    data-disable-swipe="false"
+                                    data-autoplay-limit={0}
+                                    data-nav-spacing={3}
+                                    data-duration={500}
+                                    data-infinite="true"
+                                >
+                                    <div className="mask w-slider-mask">
+                                        <div className="slide w-slide">
+                                            <div className="slider-blog">
+                                                <div className="div-block-87 ind">
+                                                    <div className="div-block-88">
+                                                        <img
+                                                            src="images/Rectangle-4404.svg"
+                                                            loading="lazy"
+                                                            alt=""
+                                                            className="image-14"
+                                                        />
+                                                        <div>
+                                                            <div className="div-block-89">
+                                                                <div className="text-block-2">Lorem ipsum</div>
+                                                                <div className="text-block-3">
+                                                                    Vestibulum sed est.
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-block-4 new">
+                                                                Access a massive pool of Design talent
+                                                            </div>
+                                                            <div className="div-block-90">
+                                                                <div className="div-block-91">
+                                                                    <img
+                                                                        src="images/Ellipse-166.svg"
+                                                                        loading="lazy"
+                                                                        alt=""
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-block-5 hz">
+                                                                        Vestibulum sed est.
+                                                                    </div>
+                                                                    <div className="text-block-6">Nec amet.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="slide w-slide">
+                                            <div className="slider-blog">
+                                                <div className="div-block-87 ind">
+                                                    <div className="div-block-88">
+                                                        <img
+                                                            src="images/Rectangle-4404.svg"
+                                                            loading="lazy"
+                                                            alt=""
+                                                            className="image-14"
+                                                        />
+                                                        <div>
+                                                            <div className="div-block-89">
+                                                                <div className="text-block-2">Lorem ipsum</div>
+                                                                <div className="text-block-3">
+                                                                    Vestibulum sed est.
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-block-4 new">
+                                                                Access a massive pool of Design talent
+                                                            </div>
+                                                            <div className="div-block-90">
+                                                                <div className="div-block-91">
+                                                                    <img
+                                                                        src="images/Ellipse-166.svg"
+                                                                        loading="lazy"
+                                                                        alt=""
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-block-5 hz">
+                                                                        Vestibulum sed est.
+                                                                    </div>
+                                                                    <div className="text-block-6">Nec amet.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="slide w-slide">
+                                            <div className="slider-blog">
+                                                <div className="div-block-87 ind">
+                                                    <div className="div-block-88">
+                                                        <img
+                                                            src="images/Rectangle-4404.svg"
+                                                            loading="lazy"
+                                                            alt=""
+                                                            className="image-14"
+                                                        />
+                                                        <div>
+                                                            <div className="div-block-89">
+                                                                <div className="text-block-2">Lorem ipsum</div>
+                                                                <div className="text-block-3">
+                                                                    Vestibulum sed est.
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-block-4 new">
+                                                                Access a massive pool of Design talent
+                                                            </div>
+                                                            <div className="div-block-90">
+                                                                <div className="div-block-91">
+                                                                    <img
+                                                                        src="images/Ellipse-166.svg"
+                                                                        loading="lazy"
+                                                                        alt=""
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-block-5 hz">
+                                                                        Vestibulum sed est.
+                                                                    </div>
+                                                                    <div className="text-block-6">Nec amet.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="slide w-slide">
+                                            <div className="slider-blog">
+                                                <div className="div-block-87 ind">
+                                                    <div className="div-block-88">
+                                                        <img
+                                                            src="images/Rectangle-4404.svg"
+                                                            loading="lazy"
+                                                            alt=""
+                                                            className="image-14"
+                                                        />
+                                                        <div>
+                                                            <div className="div-block-89">
+                                                                <div className="text-block-2">Lorem ipsum</div>
+                                                                <div className="text-block-3">
+                                                                    Vestibulum sed est.
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-block-4 new">
+                                                                Access a massive pool of Design talent
+                                                            </div>
+                                                            <div className="div-block-90">
+                                                                <div className="div-block-91">
+                                                                    <img
+                                                                        src="images/Ellipse-166.svg"
+                                                                        loading="lazy"
+                                                                        alt=""
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-block-5 hz">
+                                                                        Vestibulum sed est.
+                                                                    </div>
+                                                                    <div className="text-block-6">Nec amet.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="slide w-slide">
+                                            <div className="slider-blog">
+                                                <div className="div-block-87 ind">
+                                                    <div className="div-block-88">
+                                                        <img
+                                                            src="images/Rectangle-4404.svg"
+                                                            loading="lazy"
+                                                            alt=""
+                                                            className="image-14"
+                                                        />
+                                                        <div>
+                                                            <div className="div-block-89">
+                                                                <div className="text-block-2">Lorem ipsum</div>
+                                                                <div className="text-block-3">
+                                                                    Vestibulum sed est.
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-block-4 new">
+                                                                Access a massive pool of Design talent
+                                                            </div>
+                                                            <div className="div-block-90">
+                                                                <div className="div-block-91">
+                                                                    <img
+                                                                        src="images/Ellipse-166.svg"
+                                                                        loading="lazy"
+                                                                        alt=""
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-block-5 hz">
+                                                                        Vestibulum sed est.
+                                                                    </div>
+                                                                    <div className="text-block-6">Nec amet.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="slide w-slide">
+                                            <div className="slider-blog">
+                                                <div className="div-block-87 ind">
+                                                    <div className="div-block-88">
+                                                        <img
+                                                            src="images/Rectangle-4404.svg"
+                                                            loading="lazy"
+                                                            alt=""
+                                                            className="image-14"
+                                                        />
+                                                        <div>
+                                                            <div className="div-block-89">
+                                                                <div className="text-block-2">Lorem ipsum</div>
+                                                                <div className="text-block-3">
+                                                                    Vestibulum sed est.
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-block-4 new">
+                                                                Access a massive pool of Design talent
+                                                            </div>
+                                                            <div className="div-block-90">
+                                                                <div className="div-block-91">
+                                                                    <img
+                                                                        src="images/Ellipse-166.svg"
+                                                                        loading="lazy"
+                                                                        alt=""
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-block-5 hz">
+                                                                        Vestibulum sed est.
+                                                                    </div>
+                                                                    <div className="text-block-6">Nec amet.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="slide w-slide">
+                                            <div className="slider-blog">
+                                                <div className="div-block-87 ind">
+                                                    <div className="div-block-88">
+                                                        <img
+                                                            src="images/Rectangle-4404.svg"
+                                                            loading="lazy"
+                                                            alt=""
+                                                            className="image-14"
+                                                        />
+                                                        <div>
+                                                            <div className="div-block-89">
+                                                                <div className="text-block-2">Lorem ipsum</div>
+                                                                <div className="text-block-3">
+                                                                    Vestibulum sed est.
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-block-4 new">
+                                                                Access a massive pool of Design talent
+                                                            </div>
+                                                            <div className="div-block-90">
+                                                                <div className="div-block-91">
+                                                                    <img
+                                                                        src="images/Ellipse-166.svg"
+                                                                        loading="lazy"
+                                                                        alt=""
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-block-5 hz">
+                                                                        Vestibulum sed est.
+                                                                    </div>
+                                                                    <div className="text-block-6">Nec amet.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="left-arrow w-slider-arrow-left">
+                                        <img
+                                            src="images/Vector-left.svg"
+                                            loading="lazy"
+                                            alt=""
+                                            className="image-17"
+                                        />
+                                    </div>
+                                    <div className="right-arrow w-slider-arrow-right">
+                                        <img
+                                            src="images/Vector-right.svg"
+                                            loading="lazy"
+                                            alt=""
+                                            className="image-17"
+                                        />
+                                    </div>
+                                    <div className="display-none w-slider-nav w-round" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="white-footer">
+                    <div className="div-block-50">
+                        <div id="w-node-_806fd0e8-d8f5-4f10-5e89-bdfe9d04afce-9d04afcc">
+                            <img src="images/Neural-Leap_1.svg" loading="lazy" alt="" />
+                            <p className="paragraph-15">
+                                Crechterwoord K12 182 DK Alknjkcb, All Rights Reserved
+                            </p>
+                            <div>
+                                <img
+                                    src="images/ant-design_instagram-filled.svg"
+                                    loading="lazy"
+                                    alt=""
+                                    className="social-logo"
+                                />
+                                <img
+                                    src="images/brandico_twitter-bird.svg"
+                                    loading="lazy"
+                                    alt=""
+                                    className="social-logo"
+                                />
+                                <img
+                                    src="images/bxl_facebook.svg"
+                                    loading="lazy"
+                                    alt=""
+                                    className="social-logo"
+                                />
+                            </div>
+                        </div>
+                        <div
+                            id="w-node-_806fd0e8-d8f5-4f10-5e89-bdfe9d04afd6-9d04afcc"
+                            className="div-block-51"
+                        >
+                            <h1 className="heading-14">Links</h1>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p>Overons</p>
+                            </a>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p>Social Media</p>
+                            </a>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p>Counters</p>
+                            </a>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p>Contact</p>
+                            </a>
+                        </div>
+                        <div
+                            id="w-node-_806fd0e8-d8f5-4f10-5e89-bdfe9d04afe5-9d04afcc"
+                            className="div-block-51"
+                        >
+                            <h1 className="heading-14">Company</h1>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p>Terms &amp; Conditions</p>
+                            </a>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p>Privacy Policy</p>
+                            </a>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p>Contact</p>
+                            </a>
+                        </div>
+                        <div
+                            id="w-node-_806fd0e8-d8f5-4f10-5e89-bdfe9d04aff1-9d04afcc"
+                            className="div-block-51"
+                        >
+                            <h1 className="heading-14">Get in touch</h1>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p>Crechterwoord K12 182 DK Alknjkcb</p>
+                            </a>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p>085-132567</p>
+                            </a>
+                            <a href="#" className="footer-link w-inline-block">
+                                <p className="paragraph-16">info@payme.net</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {/* [if lte IE 9]><![endif] */}
             </div>
             <Script id="script-1" src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=605c57757b3ae676ffca1b7b" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></Script>
             <Script id="script-2" src="js/webflow.js" type="text/javascript"></Script>

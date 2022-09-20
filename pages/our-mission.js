@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import React, { useEffect } from "react";
 import { useEffectOnce } from "react-use";
 
-const Template = ({ data }) => {
+const OurMission = ({ data }) => {
   return (
     <div>
       <Head>
@@ -371,4 +371,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Template;
+export default OurMission;
