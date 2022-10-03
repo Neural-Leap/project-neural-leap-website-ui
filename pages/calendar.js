@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import React, { useEffect } from "react";
 import { useEffectOnce } from "react-use";
 
-const ThankYou = ({ data }) => {
+const Calendar = ({ data }) => {
   return (
     <div>
       <Head>
@@ -50,7 +50,7 @@ const ThankYou = ({ data }) => {
         {/* [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] */}
       </Head>
       <div className="body-2">
-  <div data-animation="default" data-collapse="medium" data-duration={400} data-easing="ease" data-easing2="ease" role="banner" className="navbar desk w-nav">
+  <div data-animation="default" data-collapse="medium" data-duration={400} data-easing="ease" data-easing2="ease" role="banner" className="navbar desk _2 w-nav">
     <div className="contain-div">
       <div className="div-block desktop">
         <a href="#" className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
@@ -66,53 +66,58 @@ const ThankYou = ({ data }) => {
       </div>
     </div>
   </div>
-  <div className="wf-section">
-    <div className="div-block-102">
-      <div className="div-block-103">
-        <div className="div-block-104">
-          <h1 className="heading-25">You’re The Best!<br /><span className="text-span-10">THANK YOU</span></h1>
-          <p className="paragraph-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin orci sem non nunc a nunc odio. Vivamus sapien, placerat pulvinar metus ultricies. Adipiscing mi velit et.</p>
+  <div className="div-block-35">
+    <div className="div-block-53">
+      <div className="div-block-54">
+        <div className="div-block-36 _2">
+          <div className="div-block-433 _2">
+            <div className="w-embed w-script">
+              {/*  Calendly inline widget begin  */}
+              <div className="calendly-inline-widget" data-url="https://calendly.com/paramaaa/30min" style={{minWidth: '280px', height: '800px'}} />
+              {/*  Calendly inline widget end  */}
+            </div>
+          </div>
         </div>
-        <div className="div-block-105"><img src="images/Frame-ty.svg" loading="lazy" alt="" className="image-18" /></div>
       </div>
     </div>
   </div>
-  <div className="footer wf-section">
+  <div className="footer white wf-section">
     <div className="div-block-62">
       <div className="div-block-27">
-        <div id="w-node-a523c9bd-aadc-f28f-44d7-8cd44e435da9-c78592c5" className="div-block-28"><img src="images/Neural-Leap_1.svg" loading="lazy" width={188} alt="" className="image-19" />
+        <div id="w-node-_40e950fb-9e70-2b4e-9c9d-3eaf455dceba-b0c8dd28" className="div-block-28"><img src="images/Neural-Leap_1.svg" loading="lazy" width={188} alt="" className="image-19" />
           <a href="#" className="link-block w-inline-block">
-            <p className="paragraph-25">Access top 1% of global talent, eliminate the cost of hiring, and effortlessly scale the team to meet their needs.</p>
+            <p className="paragraph-25 black">Crechterwoord K12 182 DK Alknjkcb, All Rights Reserved</p>
           </a>
+          <div className="div-block-108">
+            <a href="#" className="link-block-2 w-inline-block"><img src="images/ant-design_instagram-filled.svg" loading="lazy" alt="" /></a>
+            <a href="#" className="link-block-2 w-inline-block"><img src="images/brandico_twitter-bird.svg" loading="lazy" alt="" /></a>
+            <a href="#" className="link-block-2 w-inline-block"><img src="images/bxl_facebook.svg" loading="lazy" alt="" /></a>
+          </div>
         </div>
-        <div id="w-node-a523c9bd-aadc-f28f-44d7-8cd44e435dae-c78592c5" className="div-block-28">
-          <h1 className="heading-11">Pages</h1>
-          <a href="about-us.html" className="link-block w-inline-block">
-            <p>About Us</p>
-          </a>
-          <a href="our-mission.html" className="link-block w-inline-block">
-            <p>Our Mission</p>
-          </a>
-          <a href="schedule-a-demo.html" className="link-block w-inline-block">
-            <p>Get In Touch</p>
-          </a>
-        </div>
-        <div id="w-node-a523c9bd-aadc-f28f-44d7-8cd44e435dba-c78592c5">
-          <div>
-            <div className="div-block-29">
-              <p className="paragraph-9">Feel free to get in touch with us<br />via phone or send us a message.</p>
-              <p className="paragraph-10">info@neuralleap.com </p>
+        <div id="w-node-_40e950fb-9e70-2b4e-9c9d-3eaf455dcecb-b0c8dd28" className="div-block-106">
+          <div className="div-block-109">
+            <div className="text-block-7">Links</div>
+            <div className="div-block-110">
+              <a href="#" className="link-2">Overons</a>
+              <a href="#" className="link-2">Social Media</a>
+              <a href="#" className="link-2">Counters</a>
+              <a href="#" className="link-2">Contact</a>
             </div>
-            <div>
-              <div className="w-form">
-                <form id="email-form" name="email-form" data-name="Email Form" method="get" className="form"><input type="text" className="text-field w-input" maxLength={256} name="name" data-name="Name" placeholder="Your Email" id="name" /><input type="submit" defaultValue="Contact Us" data-wait="Please wait..." className="submit-button w-button" /></form>
-                <div className="w-form-done">
-                  <div>Thank you! Your submission has been received!</div>
-                </div>
-                <div className="w-form-fail">
-                  <div>Oops! Something went wrong while submitting the form.</div>
-                </div>
-              </div>
+          </div>
+          <div className="div-block-109">
+            <div className="text-block-7">Company</div>
+            <div className="div-block-110">
+              <a href="#" className="link-2">Terms &amp; Conditions</a>
+              <a href="#" className="link-2">Privacy Policy</a>
+              <a href="#" className="link-2">Contact</a>
+            </div>
+          </div>
+          <div className="div-block-109">
+            <div className="text-block-7">Get in touch</div>
+            <div className="div-block-110">
+              <a href="#" className="link-2">Crechterwoord K12 182 DK Alknjkcb</a>
+              <a href="#" className="link-2">085-132567</a>
+              <a href="#" className="link-2">info@payme.net</a>
             </div>
           </div>
         </div>
@@ -128,7 +133,7 @@ const ThankYou = ({ data }) => {
 
 export const getStaticProps = async () => {
   const markdownWithMetadata = fs
-    .readFileSync("public/content/thank-you.md")
+    .readFileSync("public/content/calendar.md")
     .toString();
 
   const parsedMarkdown = matter(markdownWithMetadata);
@@ -140,4 +145,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default ThankYou;
+export default Calendar;
