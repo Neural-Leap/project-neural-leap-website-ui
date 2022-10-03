@@ -3,6 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import React, { useEffect } from "react";
 import { useEffectOnce } from "react-use";
+import Link from "next/link";
 
 const Calendar = ({ data }) => {
   return (
@@ -53,16 +54,16 @@ const Calendar = ({ data }) => {
   <div data-animation="default" data-collapse="medium" data-duration={400} data-easing="ease" data-easing2="ease" role="banner" className="navbar desk _2 w-nav">
     <div className="contain-div">
       <div className="div-block desktop">
-        <a href="#" className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
+        <Link href="#"><a className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a></Link>
         <nav role="navigation" className="w-nav-menu">
-          <a href="/" className="nav-link w-nav-link">Home</a>
-          <a href="pricing" className="nav-link w-nav-link">Pricing</a>
-          <a href="about-us" className="nav-link w-nav-link">About Us</a>
-          <a href="our-mission" className="nav-link w-nav-link">Our Mission</a>
+          <Link href="/"><a className="nav-link w-nav-link">Home</a></Link>
+          <Link href="pricing"><a className="nav-link w-nav-link">Pricing</a></Link>
+          <Link href="about-us"><a className="nav-link w-nav-link">About Us</a></Link>
+          <Link href="our-mission"><a className="nav-link w-nav-link">Our Mission</a></Link>
         </nav>
       </div>
       <div className="div-block-2">
-        <a href="schedule-a-demo" className="button w-button">Book A Demo</a>
+        <Link href="schedule-a-demo"><a className="button w-button">Book A Demo</a></Link>
       </div>
     </div>
   </div>
@@ -85,39 +86,39 @@ const Calendar = ({ data }) => {
     <div className="div-block-62">
       <div className="div-block-27">
         <div id="w-node-_40e950fb-9e70-2b4e-9c9d-3eaf455dceba-b0c8dd28" className="div-block-28"><img src="images/Neural-Leap_1.svg" loading="lazy" width={188} alt="" className="image-19" />
-          <a href="#" className="link-block w-inline-block">
+          <Link href="#"><a className="link-block w-inline-block">
             <p className="paragraph-25 black">Crechterwoord K12 182 DK Alknjkcb, All Rights Reserved</p>
-          </a>
+          </a></Link>
           <div className="div-block-108">
-            <a href="#" className="link-block-2 w-inline-block"><img src="images/ant-design_instagram-filled.svg" loading="lazy" alt="" /></a>
-            <a href="#" className="link-block-2 w-inline-block"><img src="images/brandico_twitter-bird.svg" loading="lazy" alt="" /></a>
-            <a href="#" className="link-block-2 w-inline-block"><img src="images/bxl_facebook.svg" loading="lazy" alt="" /></a>
+            <Link href="#"><a className="link-block-2 w-inline-block"><img src="images/ant-design_instagram-filled.svg" loading="lazy" alt="" /></a></Link>
+            <Link href="#"><a className="link-block-2 w-inline-block"><img src="images/brandico_twitter-bird.svg" loading="lazy" alt="" /></a></Link>
+            <Link href="#"><a className="link-block-2 w-inline-block"><img src="images/bxl_facebook.svg" loading="lazy" alt="" /></a></Link>
           </div>
         </div>
         <div id="w-node-_40e950fb-9e70-2b4e-9c9d-3eaf455dcecb-b0c8dd28" className="div-block-106">
           <div className="div-block-109">
             <div className="text-block-7">Links</div>
             <div className="div-block-110">
-              <a href="#" className="link-2">Overons</a>
-              <a href="#" className="link-2">Social Media</a>
-              <a href="#" className="link-2">Counters</a>
-              <a href="#" className="link-2">Contact</a>
+              <Link href="#"><a className="link-2">Overons</a></Link>
+              <Link href="#"><a className="link-2">Social Media</a></Link>
+              <Link href="#"><a className="link-2">Counters</a></Link>
+              <Link href="#"><a className="link-2">Contact</a></Link>
             </div>
           </div>
           <div className="div-block-109">
             <div className="text-block-7">Company</div>
             <div className="div-block-110">
-              <a href="#" className="link-2">Terms &amp; Conditions</a>
-              <a href="#" className="link-2">Privacy Policy</a>
-              <a href="#" className="link-2">Contact</a>
+              <Link href="#"><a className="link-2">Terms &amp; Conditions</a></Link>
+              <Link href="#"><a className="link-2">Privacy Policy</a></Link>
+              <Link href="#"><a className="link-2">Contact</a></Link>
             </div>
           </div>
           <div className="div-block-109">
             <div className="text-block-7">Get in touch</div>
             <div className="div-block-110">
-              <a href="#" className="link-2">Crechterwoord K12 182 DK Alknjkcb</a>
-              <a href="#" className="link-2">085-132567</a>
-              <a href="#" className="link-2">info@payme.net</a>
+              <Link href="#"><a className="link-2">Crechterwoord K12 182 DK Alknjkcb</a></Link>
+              <Link href="#"><a className="link-2">085-132567</a></Link>
+              <Link href="#"><a className="link-2">info@payme.net</a></Link>
             </div>
           </div>
         </div>

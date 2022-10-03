@@ -3,6 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import React, { useEffect } from "react";
 import { useEffectOnce } from "react-use";
+import Link from "next/link";
 
 const ThankYou = ({ data }) => {
   return (
@@ -53,16 +54,16 @@ const ThankYou = ({ data }) => {
   <div data-animation="default" data-collapse="medium" data-duration={400} data-easing="ease" data-easing2="ease" role="banner" className="navbar desk w-nav">
     <div className="contain-div">
       <div className="div-block desktop">
-        <a href="#" className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
+        <Link href="#"><a className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a></Link>
         <nav role="navigation" className="w-nav-menu">
-          <a href="/" className="nav-link w-nav-link">Home</a>
-          <a href="pricing" className="nav-link w-nav-link">Pricing</a>
-          <a href="about-us" className="nav-link w-nav-link">About Us</a>
-          <a href="our-mission" className="nav-link w-nav-link">Our Mission</a>
+          <Link href="/"><a className="nav-link w-nav-link">Home</a></Link>
+          <Link href="pricing"><a className="nav-link w-nav-link">Pricing</a></Link>
+          <Link href="about-us"><a className="nav-link w-nav-link">About Us</a></Link>
+          <Link href="our-mission"><a className="nav-link w-nav-link">Our Mission</a></Link>
         </nav>
       </div>
       <div className="div-block-2">
-        <a href="schedule-a-demo" className="button w-button">Book A Demo</a>
+        <Link href="schedule-a-demo"><a className="button w-button">Book A Demo</a></Link>
       </div>
     </div>
   </div>
@@ -81,21 +82,21 @@ const ThankYou = ({ data }) => {
     <div className="div-block-62">
       <div className="div-block-27">
         <div id="w-node-a523c9bd-aadc-f28f-44d7-8cd44e435da9-c78592c5" className="div-block-28"><img src="images/Neural-Leap_1.svg" loading="lazy" width={188} alt="" className="image-19" />
-          <a href="#" className="link-block w-inline-block">
+          <Link href="#"><a className="link-block w-inline-block">
             <p className="paragraph-25">Access top 1% of global talent, eliminate the cost of hiring, and effortlessly scale the team to meet their needs.</p>
-          </a>
+          </a></Link>
         </div>
         <div id="w-node-a523c9bd-aadc-f28f-44d7-8cd44e435dae-c78592c5" className="div-block-28">
           <h1 className="heading-11">Pages</h1>
-          <a href="about-us" className="link-block w-inline-block">
+          <Link href="about-us"><a className="link-block w-inline-block">
             <p>About Us</p>
-          </a>
-          <a href="our-mission" className="link-block w-inline-block">
+          </a></Link>
+          <Link href="our-mission"><a className="link-block w-inline-block">
             <p>Our Mission</p>
-          </a>
-          <a href="schedule-a-demo" className="link-block w-inline-block">
+          </a></Link>
+          <Link href="schedule-a-demo"><a className="link-block w-inline-block">
             <p>Get In Touch</p>
-          </a>
+          </a></Link>
         </div>
         <div id="w-node-a523c9bd-aadc-f28f-44d7-8cd44e435dba-c78592c5">
           <div>

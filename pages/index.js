@@ -3,6 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import React, { useEffect } from "react";
 import { useEffectOnce } from "react-use";
+import Link from "next/link";
 
 const Index = ({ data }) => {
   return (
@@ -54,22 +55,22 @@ const Index = ({ data }) => {
   <div data-animation="default" data-collapse="medium" data-duration={400} data-easing="ease" data-easing2="ease" role="banner" className="navbar desk w-nav">
     <div className="contain-div">
       <div className="div-block desktop">
-        <a href="#" className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
+        <Link href="#"><a className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a></Link>
         <nav role="navigation" className="w-nav-menu">
-          <a href="/" aria-current="page" className="nav-link w-nav-link w--current">Home</a>
-          <a href="pricing" className="nav-link w-nav-link">Pricing</a>
-          <a href="about-us" className="nav-link w-nav-link">About Us</a>
-          <a href="our-mission" className="nav-link w-nav-link">Our Mission</a>
+          <Link href="/"><a aria-current="page" className="nav-link w-nav-link w--current">Home</a></Link>
+          <Link href="pricing"><a className="nav-link w-nav-link">Pricing</a></Link>
+          <Link href="about-us"><a className="nav-link w-nav-link">About Us</a></Link>
+          <Link href="our-mission"><a className="nav-link w-nav-link">Our Mission</a></Link>
         </nav>
       </div>
       <div className="div-block-2">
-        <a href="schedule-a-demo" className="button w-button">Book A Demo</a>
+        <Link href="schedule-a-demo"><a className="button w-button">Book A Demo</a></Link>
       </div>
     </div>
   </div>
   <div data-animation="default" data-collapse="medium" data-duration={400} data-easing="ease" data-easing2="ease" role="banner" className="navbar-2 w-nav">
     <div className="div-block-30">
-      <a href="/" aria-current="page" className="brand-2 w-nav-brand w--current"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
+      <Link href="/"><a aria-current="page" className="brand-2 w-nav-brand w--current"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a></Link>
       <div className="div-block-83" />
     </div>
   </div>
@@ -82,7 +83,7 @@ const Index = ({ data }) => {
               <h1 className="heading">Your Outsourced</h1>
               <h1 className="heading-2">Machine Learning Team</h1>
               <p className="paragraph">Neural Leap is an AI engineering service that enables companies to access top 1% of global talent, eliminate their cost of hiring, and effortlessly scale their team to meet their needs.</p>
-              <a href="#" className="blue-button w-button">Book A Demo</a>
+              <Link href="#"><a className="blue-button w-button">Book A Demo</a></Link>
               <div className="div-block-5"><img src="images/sap.svg" loading="lazy" alt="" className="hero-logo _1" /><img src="images/amz.svg" loading="lazy" alt="" className="hero-logo" /><img src="images/oracle.svg" loading="lazy" alt="" className="hero-logo" /><img src="images/google.svg" loading="lazy" alt="" className="hero-logo" /><img src="images/meta.svg" loading="lazy" alt="" className="hero-logo" /></div>
             </div>
             <div><img src="images/right-grp.svg" loading="lazy" alt="" className="right-image" /></div>
@@ -93,16 +94,16 @@ const Index = ({ data }) => {
     <div data-animation="default" data-collapse="medium" data-duration={400} data-easing="ease" data-easing2="ease" role="banner" className="navbar desk stickhy w-nav">
       <div className="contain-div">
         <div className="div-block desktop">
-          <a href="#" className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
+          <Link href="#"><a className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a></Link>
           <nav role="navigation" className="w-nav-menu">
-            <a href="/" aria-current="page" className="nav-link w-nav-link w--current">Home</a>
-            <a href="pricing" className="nav-link w-nav-link">Pricing</a>
-            <a href="about-us" className="nav-link w-nav-link">About Us</a>
-            <a href="our-mission" className="nav-link w-nav-link">Our Mission</a>
+            <Link href="/"><a aria-current="page" className="nav-link w-nav-link w--current">Home</a></Link>
+            <Link href="pricing"><a className="nav-link w-nav-link">Pricing</a></Link>
+            <Link href="about-us"><a className="nav-link w-nav-link">About Us</a></Link>
+            <Link href="our-mission"><a className="nav-link w-nav-link">Our Mission</a></Link>
           </nav>
         </div>
         <div className="div-block-2">
-          <a href="schedule-a-demo" className="button w-button">Book A Demo</a>
+          <Link href="schedule-a-demo"><a className="button w-button">Book A Demo</a></Link>
         </div>
       </div>
     </div>
@@ -136,7 +137,7 @@ const Index = ({ data }) => {
           <h1 className="heading-4">Eliminate Your Hiring Costs</h1>
           <h1 className="heading-5">At Every Stage.</h1>
           <p className="paragraph-3">From meeting the initial screener, to the hiring manager, to receiving a quality technical screening back, to getting vetted by the head AI engineer, to meeting everyone on the team it can get extremely costly trying to do your own hiring. By partnering with us we take this headache away from you so you can just focus on building great products.</p>
-          <a href="#" className="blue-button _3 hide w-button">Sign up</a>
+          <Link href="#"><a className="blue-button _3 hide w-button">Sign up</a></Link>
         </div>
       </div>
     </div>
@@ -159,7 +160,7 @@ const Index = ({ data }) => {
           <div id="w-node-_8798fd89-13ba-ad91-09dc-e08625bccdc3-63111abb" className="div-cover"><img src="images/circl.svg" loading="lazy" alt="" />
             <div className="div-block-13">
               <h1 className="heading-6"><span className="text-span-2">Multiple</span> Algorithms. One Team</h1>
-              <p className="paragraph-4">Whether it's helping with natural language processing, computer vision, a recommendation engine, or data engineering pipelines, we can help you bring your ideas to life.</p>
+              <p className="paragraph-4">Whether it&apos;s helping with natural language processing, computer vision, a recommendation engine, or data engineering pipelines, we can help you bring your ideas to life.</p>
             </div>
           </div>
         </div>
@@ -210,7 +211,7 @@ const Index = ({ data }) => {
               <p className="paragraph-7">Ui designer</p>
             </div>
           </div>
-          <a href="#" className="button-2 hide w-button">More Testimonials</a>
+          <Link href="#"><a className="button-2 hide w-button">More Testimonials</a></Link>
         </div>
       </div>
       <div className="div-block-61">
@@ -227,21 +228,21 @@ const Index = ({ data }) => {
       <div className="div-block-62">
         <div className="div-block-27">
           <div id="w-node-a2a4429f-4978-8740-e194-387a24b05cbc-63111abb" className="div-block-28"><img src="images/Neural-Leap_1.svg" loading="lazy" width={188} alt="" className="image-19" />
-            <a href="#" className="link-block w-inline-block">
+            <Link href="#"><a className="link-block w-inline-block">
               <p className="paragraph-25">Access top 1% of global talent, eliminate the cost of hiring, and effortlessly scale the team to meet their needs.</p>
-            </a>
+            </a></Link>
           </div>
           <div id="w-node-_99d30a7e-a79d-bcc4-f8dc-b241c5134b6a-63111abb" className="div-block-28">
             <h1 className="heading-11">Pages</h1>
-            <a href="about-us" className="link-block w-inline-block">
+            <Link href="about-us"><a className="link-block w-inline-block">
               <p className="paragraph-26">About Us</p>
-            </a>
-            <a href="our-mission" className="link-block w-inline-block">
+            </a></Link>
+            <Link href="our-mission"><a className="link-block w-inline-block">
               <p className="paragraph-27">Our Mission</p>
-            </a>
-            <a href="schedule-a-demo" className="link-block w-inline-block">
+            </a></Link>
+            <Link href="schedule-a-demo"><a className="link-block w-inline-block">
               <p className="paragraph-28">Get In Touch</p>
-            </a>
+            </a></Link>
           </div>
           <div id="w-node-_36bdb3b1-eac0-02e9-3358-270834c522c0-63111abb">
             <div>
