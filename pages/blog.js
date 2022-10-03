@@ -55,20 +55,20 @@ const Blog = ({ data }) => {
       <div className="div-block desktop">
         <a href="#" className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
         <nav role="navigation" className="w-nav-menu">
-          <a href="index.html" className="nav-link w-nav-link">Home</a>
-          <a href="pricing.html" className="nav-link w-nav-link">Pricing</a>
-          <a href="about-us.html" className="nav-link w-nav-link">About Us</a>
-          <a href="our-mission.html" className="nav-link w-nav-link">Our Mission</a>
+          <a href="/" className="nav-link w-nav-link">Home</a>
+          <a href="pricing" className="nav-link w-nav-link">Pricing</a>
+          <a href="about-us" className="nav-link w-nav-link">About Us</a>
+          <a href="our-mission" className="nav-link w-nav-link">Our Mission</a>
         </nav>
       </div>
       <div className="div-block-2">
-        <a href="schedule-a-demo.html" className="button w-button">Book A Demo</a>
+        <a href="schedule-a-demo" className="button w-button">Book A Demo</a>
       </div>
     </div>
   </div>
   <div data-animation="default" data-collapse="medium" data-duration={400} data-easing="ease" data-easing2="ease" role="banner" className="navbar-2 w-nav">
     <div className="div-block-30">
-      <a href="index.html" className="brand-2 w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
+      <a href="/" className="brand-2 w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
       <div className="div-block-83" />
     </div>
   </div>
@@ -243,13 +243,13 @@ const Blog = ({ data }) => {
         </div>
         <div id="w-node-_7b5127df-921f-a556-6260-9b90ecbec50e-84c34174" className="div-block-28">
           <h1 className="heading-11">Pages</h1>
-          <a href="about-us.html" className="link-block w-inline-block">
+          <a href="about-us" className="link-block w-inline-block">
             <p>About Us</p>
           </a>
-          <a href="our-mission.html" className="link-block w-inline-block">
+          <a href="our-mission" className="link-block w-inline-block">
             <p>Our Mission</p>
           </a>
-          <a href="schedule-a-demo.html" className="link-block w-inline-block">
+          <a href="schedule-a-demo" className="link-block w-inline-block">
             <p>Get In Touch</p>
           </a>
         </div>

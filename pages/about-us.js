@@ -55,14 +55,14 @@ const AboutUs = ({ data }) => {
       <div className="div-block desktop">
         <a href="#" className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
         <nav role="navigation" className="w-nav-menu">
-          <a href="index.html" className="nav-link w-nav-link">Home</a>
-          <a href="pricing.html" className="nav-link w-nav-link">Pricing</a>
-          <a href="about-us.html" aria-current="page" className="nav-link w-nav-link w--current">About Us</a>
-          <a href="our-mission.html" className="nav-link w-nav-link">Our Mission</a>
+          <a href="/" className="nav-link w-nav-link">Home</a>
+          <a href="pricing" className="nav-link w-nav-link">Pricing</a>
+          <a href="about-us" aria-current="page" className="nav-link w-nav-link w--current">About Us</a>
+          <a href="our-mission" className="nav-link w-nav-link">Our Mission</a>
         </nav>
       </div>
       <div className="div-block-2">
-        <a href="schedule-a-demo.html" className="button w-button">Book A Demo</a>
+        <a href="schedule-a-demo" className="button w-button">Book A Demo</a>
       </div>
     </div>
   </div>
@@ -126,13 +126,13 @@ const AboutUs = ({ data }) => {
         </div>
         <div id="w-node-ba3d8d30-50a5-7a64-faac-e9f0317afd1a-35a4ce86" className="div-block-28">
           <h1 className="heading-11">Pages</h1>
-          <a href="about-us.html" aria-current="page" className="link-block w-inline-block w--current">
+          <a href="about-us" aria-current="page" className="link-block w-inline-block w--current">
             <p>About Us</p>
           </a>
-          <a href="our-mission.html" className="link-block w-inline-block">
+          <a href="our-mission" className="link-block w-inline-block">
             <p>Our Mission</p>
           </a>
-          <a href="schedule-a-demo.html" className="link-block w-inline-block">
+          <a href="schedule-a-demo" className="link-block w-inline-block">
             <p>Get In Touch</p>
           </a>
         </div>

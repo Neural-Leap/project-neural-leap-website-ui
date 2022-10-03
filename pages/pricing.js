@@ -55,14 +55,14 @@ const Pricing = ({ data }) => {
       <div className="div-block desktop">
         <a href="#" className="brand w-nav-brand"><img src="images/Neural-Leap.svg" loading="lazy" alt="" /></a>
         <nav role="navigation" className="w-nav-menu">
-          <a href="index.html" className="nav-link w-nav-link">Home</a>
-          <a href="pricing.html" aria-current="page" className="nav-link w-nav-link w--current">Pricing</a>
-          <a href="about-us.html" className="nav-link w-nav-link">About Us</a>
-          <a href="our-mission.html" className="nav-link w-nav-link">Our Mission</a>
+          <a href="/" className="nav-link w-nav-link">Home</a>
+          <a href="pricing" aria-current="page" className="nav-link w-nav-link w--current">Pricing</a>
+          <a href="about-us" className="nav-link w-nav-link">About Us</a>
+          <a href="our-mission" className="nav-link w-nav-link">Our Mission</a>
         </nav>
       </div>
       <div className="div-block-2">
-        <a href="schedule-a-demo.html" className="button w-button">Book A Demo</a>
+        <a href="schedule-a-demo" className="button w-button">Book A Demo</a>
       </div>
     </div>
   </div>
