@@ -39,7 +39,10 @@ exports.handler = async (event, context) => {
     await user.save()
     mongoose.disconnect()
     return {
-      statusCode: 200,
+      statusCode: 302,
+      headers: {
+        Location: '/calendar',
+      },
       body: 'Success',
     }
   } catch (err) {
